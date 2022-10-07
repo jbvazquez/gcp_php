@@ -1,25 +1,23 @@
-<?php 
+<?php
 
-$helloWorld = "Hello World from Google Cloud! 2022";
-
-?>
-
-<html>
-
-    <head>
-
-        <title><?php echo $helloWorld ?></title>
-
-    </head>
-
-    <body>
-
-        <h1><?php echo $helloWorld ?></h1>
-		<p> <?php $name = getenv('NAME', true) ?: 'World';?>
-			<br>		
-			<?phpecho sprintf('Hello %s!', $name);?>
-		</p>
-
-    </body>
-
-</html>
+/**
+ * This is an example of a front controller for a flat file PHP site. Using a
+ * Static list provides security against URL injection by default. See README.md
+ * for more examples.
+ */
+# [START gae_simple_front_controller]
+switch (@parse_url($_SERVER['REQUEST_URI'])['path']) {
+    case '/':
+        require 'homepage.php';
+        break;
+    case '/contact.php':
+        require 'contact.php';
+        break;
+    case '/prueba.php':
+            require 'prueba.php';
+        break;
+    default:
+        http_response_code(404);
+        exit('Not Found');
+}
+# [END gae_simple_front_controller]
