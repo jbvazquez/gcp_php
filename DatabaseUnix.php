@@ -62,6 +62,7 @@ class DatabaseUnix
         }
 
         return $conn;
-        echo $conn;
+        $db_list = mysqli_query($conn;, "SHOW DATABASES");
+        print_r($db_list);
     }
 }
