@@ -4,7 +4,7 @@
  * A list of links to display on the homepage. This is really only here to demonstrate
  * that PHP is being executed.
  */
-$links = ['contact.php','phpinfo.php'];
+$links = ['contact.php','phpinfo.php','DatabaseUnix.php'];
 ?>
 
 <h1>Welcome to the Homepage!</h1>

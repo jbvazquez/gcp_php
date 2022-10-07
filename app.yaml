@@ -6,3 +6,9 @@ service: front-controller
 # run a long-running PHP script as a worker process (e.g. "php worker.php").
 #
 # entrypoint: serve index.php
+env_variables:
+  # /cloudsql/<PROJECT-ID>:<INSTANCE-REGION>:<INSTANCE-NAME>
+  INSTANCE_UNIX_SOCKET: /buscaminas-252317/us-central1/mysql-instance-01
+  DB_USER: root
+  DB_PASS: password
+  DB_NAME: testdatabase
