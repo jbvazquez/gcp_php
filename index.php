@@ -16,8 +16,8 @@ switch (@parse_url($_SERVER['REQUEST_URI'])['path']) {
     case '/phpinfo.php':
             require 'phpinfo.php';
         break;
-    case '/DatabaseUnix.php':
-            require 'DatabaseUnix.php';
+    case '/test.php':
+            require 'test.php';
         break;
     default:
         http_response_code(404);
